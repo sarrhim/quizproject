@@ -27,10 +27,44 @@ def create_view(request):
    return render(request, 'exams/createExam.html')
 
 
-def detail(request, question_id):
-  
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'quiz/detail.html', {'question': question})
+def detail(request, exam_id):
+
+    exam= get_object_or_404(Exam, pk=exam_id)
+    return render(request, 'exams/details.html', {'exam1': exam,
+                                                  'exam1_id':exam_id,})
+
+
+def createExam(request):
+    if request.user.is_authenticated():
+        if request.method == 'POST' and request.POST['examName']:
+            examName = request.POST['examName']
+            ExamDesc = request.POST['ExamDesc']
+            category = request.POST['category']
+            logo = request.FILES['logo']
+
+            exam = Exam()
+            exam.name = examName
+            exam.description = ExamDesc
+            exam.category = category
+            exam.logo = logo
+            exam.save()
+            request.session['id'] = exam.id
+            print(request.session['id'])
+
+            context = {
+                'exam_id': exam.id,
+            }
+            return render(request, 'exams/createQuest.html', context)
+
+def modifOne():
+    return 0
+def modifmulti():
+    return 0
+def modifFree():
+    return 0
+def deleteQuest():
+    return 0
+
 '''
 def questions(request,Exam_id):
     row=Question.objects.all().filter(examen_id=Examen_id)
