@@ -10,14 +10,13 @@
         <div class="row">
 
             <div class="col-xs-12 col-sm-12">
-                <form method="POST" action="/quiz/envoie/" enctype="multipart/form-data">
+                <form method="POST" action="" enctype="multipart/form-data">
                     {%csrf_token%}
                     <div class="card">
                         <div class="card-header">
                             <div class="col-lg-6 ">
-                                <strong>Create Question</strong></div>
-                            <div class="col-lg-6"><a href="/exams/" class="btn btn-secondary btn-block">Next
-                                question</a></div>
+                                <strong>Add Question</strong></div>
+
                         </div>
                         <div class="card-body card-block">
                             <div class="form-group">
@@ -204,6 +203,7 @@ $('#typ').change(function(){
 
 });
 });
+
 
 
 </script>

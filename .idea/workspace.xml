@@ -2,34 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3a1956-23b7-4c25-bf0a-c0e173ea5c94" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/createQuest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/create_exams_and_display_questions_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/create_exams_and_display_questions_/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/logos/3mm.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/migrations/0002_auto_20180730_0930.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/migrations/0003_auto_20180730_1001.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/migrations/0004_auto_20180730_1018.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/migrations/0005_auto_20180730_1225.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/ModifFreeText.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/ModifOneAnswer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/addQuestion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/templates/exams/editExam.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/miniprojet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/miniprojet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentification/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentification/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logos/3mm.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniprojet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/miniprojet/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniprojet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/miniprojet/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprojet/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/miniprojet/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/templates/exams/createExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/exams/createExam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/templates/exams/createQuest.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/exams/createQuest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/templates/exams/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/exams/details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz/templates/exams/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/exams/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/quiz/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/quiz/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/quiz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/quiz/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/templates/question.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/templates/quiz/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/templates/quiz/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/views.py" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,44 +43,88 @@
     <session id="-426494180">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.101" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.115" value="1" />
+          <entry key="project.open.time.119" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.91" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="575" />
-          <entry key="py" value="507" />
+          <entry key="html" value="744" />
+          <entry key="py" value="1557" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="575" />
-          <entry key="Python" value="507" />
+          <entry key="HTML" value="744" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="1557" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="8" />
+          <entry key="html" value="11" />
           <entry key="jpg" value="6" />
           <entry key="json" value="1" />
           <entry key="png" value="8" />
-          <entry key="py" value="7" />
+          <entry key="py" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="8" />
+          <entry key="HTML" value="11" />
           <entry key="Image" value="14" />
           <entry key="JSON" value="1" />
-          <entry key="Python" value="7" />
+          <entry key="Python" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.rebase" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1956925131">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="14" />
+          <entry key="py" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="14" />
+          <entry key="Python" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="213" />
+          <entry key="py" value="1317" />
+          <entry key="txt" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="213" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Python" value="1317" />
         </counts>
       </usages-collector>
     </session>
@@ -87,38 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quiz/templates/exams/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authentification/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+            <state relative-caret-position="345">
+              <caret line="40" column="62" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -126,40 +143,84 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quiz/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+            <state relative-caret-position="225">
+              <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1532955303459" expanded="true" signature="1940:1954" ph="..." />
-                <marker date="1532955303459" expanded="true" signature="1972:1987" ph="..." />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/createQuest.html">
+        <entry file="file://$PROJECT_DIR$/quiz/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+            <state relative-caret-position="367">
+              <caret line="109" column="69" selection-start-line="109" selection-start-column="69" selection-end-line="109" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1533214234668" expanded="true" signature="1288:5954" ph="..." />
+                <marker date="1533214234668" expanded="true" signature="2031:2642" ph="..." />
+                <marker date="1533214234668" expanded="true" signature="2675:5954" ph="..." />
+                <marker date="1533214234668" expanded="true" signature="7826:9623" ph="..." />
+                <marker date="1533214234668" expanded="true" signature="9659:10613" ph="..." />
+                <marker date="1533214234668" expanded="true" signature="10780:13714" ph="..." />
+                <marker date="1533214234668" expanded="true" signature="13711:13714" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/baseProfessor.html">
+        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/editExam.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+            <state relative-caret-position="666">
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/createExam.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-45">
+              <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/createQuest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/templates/exams/addQuestion.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -171,10 +232,22 @@
       <find>quiz</find>
       <find>&lt;ul</find>
       <find>create</find>
+      <find>cs</find>
+      <find>finish</find>
+      <find>type</find>
+      <find>creat</find>
+      <find>examen</find>
     </findStrings>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="ONTO" value="refs/remotes/origin/master" />
+  </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -186,23 +259,29 @@
         <option value="$PROJECT_DIR$/authentification/templates/registration/home.html" />
         <option value="$PROJECT_DIR$/authentification/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/authentification/urls.py" />
         <option value="$PROJECT_DIR$/authentification/templates/base.html" />
         <option value="$PROJECT_DIR$/authentification/templates/registration/signup.html" />
         <option value="$PROJECT_DIR$/authentification/models.py" />
         <option value="$PROJECT_DIR$/quiz/admin.py" />
         <option value="$PROJECT_DIR$/quiz/templates/exams/baseProfessor.html" />
         <option value="$PROJECT_DIR$/quiz/forms.py" />
+        <option value="$PROJECT_DIR$/quiz/templates/index.html" />
+        <option value="$PROJECT_DIR$/quiz/models.py" />
         <option value="$PROJECT_DIR$/quiz/templates/exams/createExam.html" />
         <option value="$PROJECT_DIR$/miniprojet/settings.py" />
         <option value="$PROJECT_DIR$/miniprojet/urls.py" />
-        <option value="$PROJECT_DIR$/quiz/templates/index.html" />
-        <option value="$PROJECT_DIR$/quiz/templates/exams/index.html" />
-        <option value="$PROJECT_DIR$/quiz/models.py" />
-        <option value="$PROJECT_DIR$/quiz/templates/exams/details.html" />
-        <option value="$PROJECT_DIR$/quiz/urls.py" />
-        <option value="$PROJECT_DIR$/quiz/views.py" />
+        <option value="$PROJECT_DIR$/authentification/urls.py" />
         <option value="$PROJECT_DIR$/quiz/templates/exams/createQuest.html" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/ModifMultoAnswer.html" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/ModifOneAnswer.html" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/details.html" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/ModifMultiAnswer.html" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/ModifFreeText.html" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/index.html" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/editExam.html" />
+        <option value="$PROJECT_DIR$/quiz/urls.py" />
+        <option value="$PROJECT_DIR$/quiz/templates/exams/addQuestion.html" />
+        <option value="$PROJECT_DIR$/quiz/views.py" />
       </list>
     </option>
   </component>
@@ -211,12 +290,12 @@
     <option name="width" value="1366" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,6 +307,19 @@
               <item name="miniprojet" type="b2602c69:ProjectViewProjectNode" />
               <item name="miniprojet" type="462c0819:PsiDirectoryNode" />
               <item name="authentification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniprojet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniprojet" type="462c0819:PsiDirectoryNode" />
+              <item name="authentification" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniprojet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniprojet" type="462c0819:PsiDirectoryNode" />
+              <item name="authentification" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miniprojet" type="b2602c69:ProjectViewProjectNode" />
@@ -267,10 +359,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -279,6 +372,16 @@
     </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="CompoundRunConfigurationType" />
+        <option value="JupiterNotebook" />
+        <option value="PythonConfigurationType" />
+        <option value="Tox" />
+        <option value="docs" />
+        <option value="tests" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -313,7 +416,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18941048" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -324,11 +427,14 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3870293" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32881" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49945414" visible="true" weight="0.3870293" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3294979" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50054586" side_tool="true" visible="true" weight="0.3870293" />
+      <window_info anchor="bottom" id="SVN Repositories" order="11" weight="0.3294979" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Run Dashboard" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -337,22 +443,17 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/quizproject" />
+    </ignored-roots>
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simple-django-login-and-register/app/settings.py" />
-    <entry file="file://$PROJECT_DIR$/authentification/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentification/templates/registration/logout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/authentification/templates/registration/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -385,40 +486,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authentification/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentification/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quiz/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/question.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniprojet/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/question.html" />
     <entry file="file://$PROJECT_DIR$/authentification/forms.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -431,41 +502,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/authentification/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/createExam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentification/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniprojet/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniprojet/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authentification/static/images/avatar/1.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -512,20 +548,12 @@
     <entry file="file://$PROJECT_DIR$/quiz/templates/exams/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/detail.html">
+    <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/detail.html" />
+    <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/index.html" />
+    <entry file="file://$PROJECT_DIR$/quiz/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        <state relative-caret-position="555">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -539,39 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1532955303459" expanded="true" signature="1940:1954" ph="..." />
-            <marker date="1532955303459" expanded="true" signature="1972:1987" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quiz/templates/exams/baseProfessor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
@@ -579,10 +574,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/createQuest.html">
+    <entry file="file://$PROJECT_DIR$/quiz/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentification/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniprojet/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentification/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentification/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniprojet/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/ModifMultoAnswer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <caret line="55" column="113" lean-forward="true" selection-start-line="55" selection-start-column="113" selection-end-line="55" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/ModifOneAnswer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="101" column="108" selection-start-line="101" selection-start-column="91" selection-end-line="101" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniprojet/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#1#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/ModifMultiAnswer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="93" column="63" lean-forward="true" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/ModifFreeText.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="89" column="90" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/editExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/createExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="40" column="62" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/createQuest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/exams/addQuestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="109" column="69" selection-start-line="109" selection-start-column="69" selection-end-line="109" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1533214234668" expanded="true" signature="1288:5954" ph="..." />
+            <marker date="1533214234668" expanded="true" signature="2031:2642" ph="..." />
+            <marker date="1533214234668" expanded="true" signature="2675:5954" ph="..." />
+            <marker date="1533214234668" expanded="true" signature="7826:9623" ph="..." />
+            <marker date="1533214234668" expanded="true" signature="9659:10613" ph="..." />
+            <marker date="1533214234668" expanded="true" signature="10780:13714" ph="..." />
+            <marker date="1533214234668" expanded="true" signature="13711:13714" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -6,6 +6,7 @@ class Exam(models.Model):
 
     logo = models.ImageField(upload_to='logos',  null=True)
     description=models.CharField(max_length=600, verbose_name=u'Exam_descr' ,default=" ")
+    category = models.CharField(max_length=200, verbose_name=u'category', default=" ")
     timer=models.IntegerField(default=0)
     is_active = models.BooleanField(default=False)
 

@@ -7,7 +7,7 @@
     <!-- Page Content -->
     <div class="content mt-3">
             <div class="animated fadeIn">
-                            <form method="POST" action="/exam/createQuest/" enctype="multipart/form-data">
+                <form method="POST" action="/quiz/createQuest/" enctype="multipart/form-data">
 
                 <div class="row">
 
@@ -21,14 +21,17 @@
                                     <div class="form-group">
                                         <label class=" form-control-label">Name :</label>
                                         <div class="input-group">
-                                            <input class="form-control" name="examName" placeholder="Exam ...">
+                                            <input class="form-control" name="examName"
+                                                   placeholder="write name of exam here...">
                                         </div>
                                         <small class="form-text text-muted"></small>
                                     </div>
                                     <div class="form-group">
                                         <label  class=" form-control-label">Description</label>
                                         <div class="input-group">
-                                            <textarea name="ExamDesc" id="ExamDesc" rows="9" placeholder="Content..." class="form-control"></textarea>
+                                            <textarea name="ExamDesc" id="ExamDesc" rows="9"
+                                                      placeholder="Describe the exam here..."
+                                                      class="form-control"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -56,10 +59,10 @@
 
                                       <select data-placeholder="Choose a Category..." class="standardSelect" tabindex="1" name="category">
                                         <option value=""></option>
-                                        <option value="WEB">WEB</option>
-                                        <option value="IOT">IOT</option>
-                                        <option value="devops">devops</option>
-                                        <option value="United Kingdom">IOT</option>
+                                          <option value="Web">WEB</option>
+                                          <option value="mobile">IOT</option>
+                                          <option value="embarqué">devops</option>
+                                          <option value="electronic">IOT</option>
 
                                     </select>
                                 </div>
