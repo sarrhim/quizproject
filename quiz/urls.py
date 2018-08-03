@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^(?P<exam_id>[0-9]+)/deleteEXam/$', views.deleteExam, name='deleteEXam'),
     url(r'^(?P<exam_id>[0-9]+)/editExam/$', views.editExam, name='editExam'),
     url(r'^(?P<exam_id>[0-9]+)/addQuest/$', views.addQuest, name='addQuest'),
+    url(r'^(?P<exam_id>[0-9]+)/passer/$', views.passer, name='passer'),
   ]
 """
     url(r'^(?P<exam_id>[0-9]+)/reponse/$', views.reponse, name='reponse'),
@@ -25,6 +26,6 @@ urlpatterns = [
     
     
     
-    url(r'^(?P<exam_id>[0-9]+)/passe/$', views.passe, name='passe'),
+    
     url(r'^(?P<exam_id>[0-9]+)/passe/(?P<Quest_id>[0-9]+)$', views.passeQuest, name='passeQuest'),
     """

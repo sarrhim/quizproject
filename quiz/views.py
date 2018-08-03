@@ -325,25 +325,10 @@ def envoie(request):
         return render(request, 'exams/createQuest.html')
 
 
-'''
-def questions(request,Exam_id):
-    row=Question.objects.all().filter(examen_id=Examen_id)
-    l=[]
-    k=[]
-    for q in row:
-        k=[]
-        k.append(q.question_text)
-        row1=Answer.objects.all().filter(question_id=q.id)
-        for m in row1:
-            k.append(m)
-        l.append(k)
-
-    dict={}
-    template=loader.get_template('question.html')
-    dict[1]=l
-    context= dict
-    return HttpResponse(template.render(context,request))
-'''
+def passer(request, Exam_id):
+    exam = get_object_or_404(Exam, pk=exam_id)
+    return render(request, 'exams/passerExam.html', {'exam1': exam,
+                                                     'exam1_id': exam_id, })
 
 
 def index1(request, Examen_id):
