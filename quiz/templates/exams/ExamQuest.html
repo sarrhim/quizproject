@@ -1,0 +1,151 @@
+{% extends 'exams/baseProfessor.html' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block content %}
+
+<div class="col-lg-8">
+
+
+    <div class="card">
+        <div class="card-header">
+            <h4>Exam {{examen.name}}</h4>
+        </div>
+        <div class="card-body">
+
+            <form method="post" action="{{i}}" enctype="multipart/form-data">
+
+
+                {%csrf_token%}
+                <input type="hidden" value="{{question.id}}" name="id">
+
+                {%if quest.multichoice_set.all %}
+                <div class="col col-md-3"><label class=" form-control-label">{{quest.question_text}}</label></div>
+                <div class="col col-md-9">
+                    <div class="form-check">
+                        {%for choix in quest.multichoice_set.all %}
+                        <div class="radio">
+                            <label for="{{choix.id}}" class="form-check-label ">
+                                <input type="radio" name="radiosM" value="{{choix.id}}" class="form-check-input">{{choix.multi_variant}}
+                            </label>
+                        </div>
+
+                        {%endfor%}
+
+                    </div>
+                </div>
+
+                {%endif%}
+                {%if quest.one_answer_set.all %}
+                <div class="col col-md-3"><label class=" form-control-label">{{quest.question_text}}</label></div>
+                <div class="col col-md-9">
+                    <div class="form-check">
+                        {%for choix in quest.one_answer_set.all %}
+                        <div class="radio">
+                            <label for="{{choix.id}}" class="form-check-label ">
+                                <input type="radio" id="{{choix.id}}" name="radios" value="{{choix.id}}"
+                                       class="form-check-input">{{choix.answer_variant}}
+                            </label>
+                        </div>
+
+                        {%endfor%}
+                        <a href="#{{question.id}}" class="btn btn-block ">{{forloop.counter}}</a>
+
+                    </div>
+                </div>
+
+                {%endif%}
+                {%if quest.free_text_set.all %}
+
+
+                {%for choix in quest.free_text_set.all %}
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">{{quest.question_text}}</label>
+                    </div>
+                    <div class="col-12 col-md-9"><textarea name="text" id="textarea-input" rows="9"
+                                                           placeholder="Content..." class="form-control"></textarea>
+                    </div>
+
+                </div>
+
+                <br>{%endfor%}
+
+
+                {%endif%}
+                <center><input type="submit" value="submit" class="btn btn-danger" name="submit">
+                </center>
+
+                <span id="time"></span>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+<div class="col-lg-4">
+    <div class="card">
+        <div class="card-header">
+            <strong>Questions</strong>
+        </div>
+        <div class="card-body">
+            {% for qu in liste %}
+            {% for index in bliste %}
+            {% if forloop.counter == forloop.parentloop.counter %}
+            {% if index %}
+            <a href="{{qu}}" class="btn  btn-success" style="margin:3px">{{forloop.parentloop.counter}}</a>
+            {% else %}
+            <a href="{{qu}}" class="btn  btn-danger" style="margin:3px">{{forloop.parentloop.counter}}</a>
+            {% endif%}
+            {% endif %}
+            {% endfor %}
+            {%endfor%}
+
+        </div>
+    </div>
+</div>
+<center><a href="/quiz/{{examen_id}}/result" class="btn btn-block btn-primary">Finish</a></center>
+<p id="demo"></p>
+
+
+<script>
+function startTimer(duration, display) {
+var start = localStorage.getItem("start"),
+diff,
+minutes,
+seconds;
+if (start === null) {
+start = Date.now();
+localStorage.setItem("start", start);
+}
+function timer() {
+// get the number of seconds that have elapsed since // startTimer() was called
+diff = duration - (((Date.now() - start) / 1000) | 0);
+// does the same job as parseInt truncates the float
+minutes = (diff / 60) | 0;
+seconds = (diff % 60) | 0;
+minutes = minutes < 10 ? "0" + minutes : minutes;
+seconds = seconds < 10 ? "0" + seconds : seconds;
+display.textContent = minutes + ":" + seconds;
+if (diff <= 0) {
+// add one second so that the count down starts at the full duration
+// example 05:00 not 04:59
+
+location.href="/quiz/{{examen_id}}/result";
+start = Date.now() + 1000;
+}
+}
+;
+// we don't want to wait a full second before the timer starts
+timer();
+setInterval(timer, 1000);
+}
+window.onload = function () {
+var thirtyMinutes = 60 * {{examen.timer}},
+display = document.querySelector('#time');
+startTimer(thirtyMinutes, display);
+};
+
+
+</script>
+
+{% endblock %}

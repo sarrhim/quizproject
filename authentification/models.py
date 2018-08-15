@@ -1,8 +1,8 @@
-from django.db import models
-from quiz.models import Exam as E,Question as Q
 from django.contrib.auth.models import User
+from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -13,6 +13,8 @@ class Profile(models.Model):
     phone_number=models.CharField(max_length=13, blank=True)
     is_professor=models.BooleanField(default=False)
 
+
+# Create Django Signals
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
     if created:

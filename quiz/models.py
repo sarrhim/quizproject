@@ -1,9 +1,10 @@
+from django.contrib.auth.models import User
 from django.db import models
+
 
 class Exam(models.Model):
   
     name = models.CharField(max_length=64, verbose_name=u'Exam_name' ,default=" ")
-
     logo = models.ImageField(upload_to='logos',  null=True)
     description=models.CharField(max_length=600, verbose_name=u'Exam_descr' ,default=" ")
     category = models.CharField(max_length=200, verbose_name=u'category', default=" ")
@@ -47,4 +48,11 @@ class MultiChoice(models.Model):
         return self.multi_variant
 
 
-
+class Reponse(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='Exam', default=1)
+    one_answer = models.ForeignKey(One_answer, on_delete=models.CASCADE, related_name='One_answer', null=True)
+    multichoice = models.ForeignKey(MultiChoice, on_delete=models.CASCADE, related_name='multi_choice_answer',
+                                    null=True)
+    free_text = models.CharField(max_length=1000, default='')  # enregistrer le score ou l id!!!!!!!!!
+    score = models.IntegerField(default=0)

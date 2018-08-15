@@ -1,0 +1,128 @@
+{% extends 'exams/baseProfessor.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+    <form method="post" action="">
+        <!-- Page Heading -->
+
+        <div class="col-xs-12 col-sm-12">
+            {%csrf_token%}
+            <div class="card">
+                <div class="card-header">
+                    <div class="col-lg-6 ">
+                        <strong>Edit Question</strong></div>
+                </div>
+                <div class="card-body card-block">
+                    <div class="form-group">
+                        <label class=" form-control-label">Description: :</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                            <input class="form-control" value="{{question.question_text}}" name="Description">
+                        </div>
+                        <small class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Header text</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                            <input class="form-control" value="{{question.header_text}}" name="Header">
+                        </div>
+                        <small class="form-text text-muted">ex. (999) 999-9999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Footer text</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                            <input class="form-control" value="{{question.footer_text}}" name="Footer">
+                        </div>
+                        <small class="form-text text-muted">ex. (999) 999-9999</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label class=" form-control-label">Success msg</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                            <input class="form-control" value="{{question.success_msg}}" name="Success">
+                        </div>
+                        <small class="form-text text-muted">ex. 99-9999999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">fail msg</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                            <input class="form-control" value="{{question.fail_msg}}" name="Fail">
+                        </div>
+                        <small class="form-text text-muted">ex. 99-9999999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">points</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                            <input class="form-control" type="number" value="{{question.point}}" name="points">
+                        </div>
+                        <small class="form-text text-muted">ex. 99-9999999</small>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Project One -->
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <div class="col-lg-6 ">
+                    <strong class="card-title">{{question.question_text}}</strong></div>
+                <div class="col-lg-6 ">
+                    <button class="btn btn-success btn-block">submit</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">answer variant</th>
+                        <th scope="col">answer description</th>
+                        <th scope="col">points</th>
+                    </tr>
+                    </thead>
+                    {%for choix in question.multichoice_set.all %}
+                    <!--creation d un compteur pour faire le name et l affecter au post-->
+
+                    <tbody>
+                    <tr>
+                        <td><input type="hidden" value="{{choix.id}}" name="id{{forloop.counter}}">{{forloop.counter}}
+                        </td>
+                        <td><input value="{{choix.multi_variant}}" name="answer_variant{{forloop.counter}}"></td>
+                        <td><input value="{{choix.multi_description}}" name="answer_description{{forloop.counter}}">
+                        </td>
+                        <td><input value="{{choix.choice_point}}" name="points{{forloop.counter}}"></td>
+                    </tr>
+
+                    </tbody>
+
+                    {%endfor%}
+                </table>
+
+            </div>
+        </div>
+
+
+    </form>
+
+
+    <!-- Pagination -->
+
+</div>
+<!-- /.container -->
+{% endblock %}
+s

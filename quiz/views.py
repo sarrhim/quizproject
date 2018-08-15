@@ -1,17 +1,11 @@
-from django.http import Http404
+from random import *
+
 from django.http import HttpResponse
-from django.template import loader
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from .models import Exam, Question
-from django.views import generic
-from django.views.generic import View
-from django.db import connection
-from django.shortcuts import render, redirect
-from .models import Question, Exam, One_answer, Free_text, MultiChoice
+from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
 from django.template import loader
+
+from .models import Question, Exam, One_answer, Free_text, MultiChoice, Reponse
 
 
 def index(request):
@@ -325,13 +319,151 @@ def envoie(request):
         return render(request, 'exams/createQuest.html')
 
 
-def passer(request, Exam_id):
+x = 0
+liste = []
+bliste = []
+w = 0
+
+
+def passer(request, exam_id):
     exam = get_object_or_404(Exam, pk=exam_id)
+
+    global liste
+    global bliste
+    global x
+    q = Question.objects.filter(exam=exam)
+    l = []
+    for i in q:
+        l.append(i.id)
+    liste = sample(l, k=len(l))
+    bliste = [False] * len(liste)
+    x = 0
     return render(request, 'exams/passerExam.html', {'exam1': exam,
-                                                     'exam1_id': exam_id, })
+                                                     'exam1_id': exam_id,
+                                                     'y': liste[0]})
 
 
-def index1(request, Examen_id):
-    latest_question_list = Question.objects.all().filter(exam_id=Exam_id)
-    context = {'latest_question_list': latest_question_list, }
-    return render(request, 'quiz/index.html', context)
+def passer2(request, exam_id, question_id):
+    global liste
+    global bliste
+    global x
+    global w
+    first = 0
+
+    exam1 = Exam.objects.get(pk=exam_id)
+    q = Question.objects.filter(exam=exam1)
+
+    question = Question.objects.get(pk=question_id)
+    if x == len(liste) - 1:
+        bliste[x] = True
+    x = liste.index(question.id)
+    if request.method == 'POST':
+        if w == 0:
+            bliste[x - 1] = True
+            first = 1
+        else:
+            bliste[x] = True
+
+        rep = Reponse()
+        rep.user = request.user
+        rep.exam = exam1
+        if 'radios' in request.POST:
+            c = request.POST['radios']
+            a = One_answer.objects.get(pk=c)
+            rep.one_answer = a
+            rep.score = a.answer_point
+            rep.save()
+        elif 'radiosM' in request.POST:
+            c = request.POST['radiosM']
+            a = MultiChoice.objects.get(pk=c)
+            rep.multichoice = a
+            rep.score = a.choice_point
+            rep.save()
+        else:
+            c = request.POST['text']
+            rep.free_text = c
+            # score for free text question for review
+            rep.score = 2
+            rep.save()
+        x = x + 1
+        if x < len(liste):
+
+            context = {
+                'examen_id': exam_id,
+                'examen': exam1,
+                'quest_id': question_id,
+                'quest': question,
+                'liste': liste,
+                'i': liste[x],
+                'bliste': bliste,
+                'first': first,
+            }
+
+            return render(request, "exams/ExamQuest.html", context)
+            w = w + 1
+
+            # in last question, submit redirect to first question not submitted in list if exist else to result
+        else:
+
+            if liste[bliste.index(False)] >= 0:
+                context = {'examen_id': exam_id,
+                           'examen': exam1,
+                           'quest_id': question_id,
+                           'quest': question,
+                           'liste': liste,
+                           'bliste': bliste,
+                           'i': liste[bliste.index(False)],
+                           'first': first,
+                           }
+
+                return render(request, "exams/ExamQuest.html", context)
+            else:
+                return result(request, exam_id)
+
+    else:
+        if x < len(liste) - 1:
+
+            context = {
+                'examen_id': exam_id,
+                'examen': exam1,
+                'quest_id': question_id,
+                'quest': question,
+                'liste': liste,
+                'bliste': bliste,
+                'i': liste[x + 1],
+                'first': first,
+
+            }
+        else:
+            context = {
+                'examen_id': exam_id,
+                'examen': exam1,
+                'quest_id': question_id,
+                'quest': question,
+                'liste': liste,
+                'bliste': bliste,
+                'i': liste[bliste.index(False)],
+                'first': first,
+            }
+        return render(request, "exams/ExamQuest.html", context)
+
+
+def result(request, exam_id):
+    score = 0
+    exam = Exam.objects.get(pk=exam_id)
+    listeRep = Reponse.objects.filter(exam=exam, user=request.user)
+    for res in listeRep:
+        score += res.score
+    context = {
+        'username': request.user,
+        'examen_id': exam_id,
+        'exam': exam,
+        'score': score,
+    }
+    print(score)
+
+    return render(request, "exams/result.html", context)
+
+
+def reponse(request, exam_id):
+    return 0

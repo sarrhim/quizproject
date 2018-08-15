@@ -1,0 +1,26 @@
+{% extends 'exams/baseProfessor.html' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block content %}
+
+
+<div class="card">
+    <div class="card-header">
+        <h4>Exam {{exam1.name}}</h4>
+    </div>
+    <div class="card-body">
+
+        <div class="col-lg-8">
+            <center><h1>Let's begin</h1></center>
+        </div>
+        <div class="col-lg-4">
+            <a href="{{y}}" class="btn btn-block btn-success">begin</a>
+
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
