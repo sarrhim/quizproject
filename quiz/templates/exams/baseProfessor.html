@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load staticfiles %}
+
   <head>
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +21,6 @@
     <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
     <link rel="stylesheet" href="{% static 'assets/scss/style.css'%}">
     <link href="{% static 'assets/css/lib/vector-map/jqvmap.min.css'%}" rel="stylesheet">
-      <!--<link rel="stylesheet" href="{% static 'assets/css/style.css'%}">-->
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
           <link rel="stylesheet" href="assets/css/normalize.css">
@@ -34,12 +34,6 @@
       <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
       <script type="text/javascript" src="js/jquery.plugin.js"></script>
       <script type="text/javascript" src="js/jquery.countdown.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-
 
 
 
@@ -80,7 +74,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Users</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{% url 'index' %}">create user</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{% url 'addUser' %}">Add student</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{% url 'listUsers' %}">My students</a></li>
                         </ul>
                     </li>
                      <li class="menu-item-has-children dropdown">

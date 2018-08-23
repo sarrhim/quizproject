@@ -1,8 +1,10 @@
-from django.shortcuts import render
 from django.contrib.auth import login, authenticate
-from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+
 from authentification.forms import SignUpForm
+from quiz.models import studentClass
+
 
 @login_required
 
@@ -20,6 +22,15 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
+            st = invitation.all().filter(student=request.user.email)
+            if st != null:
+                for k in st:
+                    sc = studentClass()
+                    sc.professor = k.prof
+                    sc.student = request.user
+                    sc.exam = k.exams
+                    sc.email_invited = k.student
+                    sc.save()
             return redirect('home')
     else:
         form = SignUpForm()

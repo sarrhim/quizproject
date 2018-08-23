@@ -1,0 +1,48 @@
+{% extends 'exams/baseProfessor.html' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block content %}
+<div class="container">
+    <button class="btn btn-success float-xl-right" onclick="location.href='/quiz/AddUser/InviteUser'">Send mail</button>
+    <br>
+    <h2>List of users</h2>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Choose Exam</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {%for user in users%}
+        <tr>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>
+                <form method="post" action="#">
+                    {%csrf_token%}
+                    <input list="browsers" name="browser">
+                    <datalist id="browsers">
+                        {%for exam in exams%}
+                        <option value="{{exam.name}}">
+                            {%endfor%}
+
+                    </datalist>
+                    <input type="hidden" value="{{user.email}}" name="email">
+                    <input type="submit" value="Invite" class="btn btn-success">
+                </form>
+
+            </td>
+
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

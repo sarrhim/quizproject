@@ -26,7 +26,7 @@
                         {%for choix in quest.multichoice_set.all %}
                         <div class="radio">
                             <label for="{{choix.id}}" class="form-check-label ">
-                                <input type="radio" name="radiosM" value="{{choix.id}}" class="form-check-input">{{choix.multi_variant}}
+                                <input type="checkbox" name="radiosM" value="{{choix.id}}" class="form-check-input">{{choix.multi_variant}}
                             </label>
                         </div>
 
@@ -75,8 +75,9 @@
                 <center><input type="submit" value="submit" class="btn btn-danger" name="submit">
                 </center>
 
-                <span id="time"></span>
+
             </form>
+            <span id="time"></span>
 
 
         </div>
@@ -130,8 +131,11 @@ if (diff <= 0) {
 // add one second so that the count down starts at the full duration
 // example 05:00 not 04:59
 
-location.href="/quiz/{{examen_id}}/result";
+
 start = Date.now() + 1000;
+localStorage.clear();
+document.location.href="/quiz/{{examen_id}}/result";
+
 }
 }
 ;

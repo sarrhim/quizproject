@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_static_jquery',
 
 
 ]
@@ -128,3 +129,9 @@ LOGOUT_REDIRECT_URL = '/authentification/'
 LOGIN_REDIRECT_URL = '/quiz/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+EMAIL_HOST = 'smtp.ghazelatc.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'quiz@ghazelatc.com'
+EMAIL_HOST_PASSWORD = 'quizlab2018'
+EMAIL_USE_TLS = True

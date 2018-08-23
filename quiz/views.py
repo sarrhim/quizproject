@@ -1,11 +1,12 @@
 from random import *
 
+from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from django.template import loader
 
-from .models import Question, Exam, One_answer, Free_text, MultiChoice, Reponse
+from .models import Question, Exam, One_answer, Free_text, MultiChoice, Reponse, studentClass, Invitation, User
 
 
 def index(request):
@@ -405,7 +406,7 @@ def passer2(request, exam_id, question_id):
             # in last question, submit redirect to first question not submitted in list if exist else to result
         else:
 
-            if liste[bliste.index(False)] >= 0:
+            if liste[bliste.index(False)]:
                 context = {'examen_id': exam_id,
                            'examen': exam1,
                            'quest_id': question_id,
@@ -464,6 +465,68 @@ def result(request, exam_id):
 
     return render(request, "exams/result.html", context)
 
-
 def reponse(request, exam_id):
     return 0
+
+
+def invitation(request):
+    if request.POST:
+        l = []
+        ch = request.POST['mails']
+        l = ch.split(';')
+        mail = request.POST['email']
+        ex = request.POST['browser']
+        send_mail('Invitation',
+                  ex,
+                  'quiz@ghazelatc.com',
+                  l,
+                  fail_silently=False
+                  )
+        exam = Exam.objects.get(name=ex)
+        for u in l:
+            i = Invitation()
+            i.prof = request.user
+            i.student = u
+            i.exams = exam
+            i.save()
+    return render(request, 'exams/invitation.html')
+
+
+def listUsers(request):
+    studentclass = studentClass.objects.all().filter(professor=request.user)
+    print(studentclass)
+
+    context = {
+        "profiles": studentclass,
+        'user': request.user,
+    }
+    return render(request, 'exams/listUsers.html', context)
+
+
+def addUser(request):
+    if request.POST:
+        mail = request.POST['email']
+        ex = request.POST['browser']
+        send_mail('Invitation',
+                  ex,
+                  'quiz@ghazelatc.com',
+                  [mail],
+                  fail_silently=False
+                  )
+        st = User.objects.get(email=mail)
+        exam = Exam.objects.get(name=ex)
+        sc = studentClass()
+        sc.professor = request.user
+        sc.student = st
+        sc.exam = exam
+        sc.email_invited = mail
+        sc.save()
+    users = User.objects.all()
+    exams = Exam.objects.all().filter(is_active="True")
+    context = {
+        'users': users,
+        'exams': exams,
+
+    }
+
+    return render(request, 'exams/addUser.html', context)

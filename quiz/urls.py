@@ -19,6 +19,10 @@ urlpatterns = [
     url(r'^(?P<exam_id>[0-9]+)/passer/(?P<question_id>[0-9]+)$', views.passer2, name='passer2'),
     url(r'^(?P<exam_id>[0-9]+)/result/$', views.result, name='result'),
     url(r'^(?P<exam_id>[0-9]+)/reponse/$', views.reponse, name='reponse'),
+    url(r'^AddUser/$', views.addUser, name='addUser'),
+    url(r'^listUsers/$', views.listUsers, name='listUsers'),
+    url(r'^AddUser/InviteUser$', views.invitation, name='invitation'),
+
 ]
 """
     

@@ -1,0 +1,28 @@
+{% extends 'exams/baseProfessor.html' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="post" action="#">
+        {%csrf_token%}
+        <div class="form-group shadow-textarea">
+            <label for="exampleFormControlTextarea6">Send Invitation to:</label>
+            <textarea name="mails" class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                      placeholder="Write mails here...(';' between mails)"></textarea>
+        </div>
+        <label for="exampleFormControlTextarea6">To pass:</label>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            {%for exam in exams%}
+            <option value="{{exam.name}}">
+                {%endfor%}
+
+        </datalist>
+        <input type="hidden" value="{{user.email}}" name="email">
+        <br><br>
+        <input type="submit" value="Invite" class="btn btn-success float-xl-right">
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'exams/baseProfessor.html' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2>List of students</h2>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Exams</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {%for stud in profiles%}
+        <tr>
+            <td><a href="/quiz/profile">{{stud.student.username}}</a></td>
+            <td>{{stud.email_invited}}</td>
+            <td>{{stud.exam}}</td>
+
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

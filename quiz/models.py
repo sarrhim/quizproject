@@ -56,3 +56,16 @@ class Reponse(models.Model):
                                     null=True)
     free_text = models.CharField(max_length=1000, default='')  # enregistrer le score ou l id!!!!!!!!!
     score = models.IntegerField(default=0)
+
+
+class studentClass(models.Model):
+    professor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='prof', default=1)
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student', default=0)
+    exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='exam', default=0)
+    email_invited = models.CharField(max_length=1000, default="")
+
+
+class Invitation(models.Model):
+    prof = models.ForeignKey(User, on_delete=models.CASCADE, related_name='professor', default=1)
+    student = models.CharField(max_length=600, default=" ")
+    exams = models.ForeignKey(Exam, on_delete=models.CASCADE, default=0)
