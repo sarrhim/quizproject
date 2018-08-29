@@ -1,15 +1,18 @@
-
-from django.conf.urls import include,url
+from django.conf.urls import include, url
 from django.contrib import admin
-from . import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import path
+from django.views.generic.base import RedirectView
+
+from . import settings
 
 urlpatterns = [
-    
     url(r'^admin/', admin.site.urls),
     url(r'^auth/', include('authentification.urls')),
     url(r'^quiz/', include('quiz.urls')),
+    path('', RedirectView.as_view(url='/auth/', permanent=True)),
+
 
 
 ]

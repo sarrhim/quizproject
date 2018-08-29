@@ -6,6 +6,8 @@ from authentification.forms import SignUpForm
 from quiz.models import studentClass
 
 
+def index(request):
+    return render(request, 'index.html')
 @login_required
 
 def home(request):

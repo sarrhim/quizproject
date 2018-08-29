@@ -9,6 +9,10 @@ class Exam(models.Model):
     description=models.CharField(max_length=600, verbose_name=u'Exam_descr' ,default=" ")
     category = models.CharField(max_length=200, verbose_name=u'category', default=" ")
     timer=models.IntegerField(default=0)
+    mode = models.CharField(
+        max_length=40,
+        default='Training',
+    )
     is_active = models.BooleanField(default=False)
 
     def __str__(self):
@@ -54,7 +58,7 @@ class Reponse(models.Model):
     one_answer = models.ForeignKey(One_answer, on_delete=models.CASCADE, related_name='One_answer', null=True)
     multichoice = models.ForeignKey(MultiChoice, on_delete=models.CASCADE, related_name='multi_choice_answer',
                                     null=True)
-    free_text = models.CharField(max_length=1000, default='')  # enregistrer le score ou l id!!!!!!!!!
+    free_text = models.CharField(max_length=1000, default='')
     score = models.IntegerField(default=0)
 
 
