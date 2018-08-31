@@ -16,8 +16,7 @@
                         <div class="card-header">
                             <div class="col-lg-6 ">
                                 <strong>Create Question</strong></div>
-                            <div class="col-lg-6"><a href="/exams/" class="btn btn-secondary btn-block">Next
-                                question</a></div>
+                            <div class="col-lg-6"><a href="/quiz/" class="btn btn-secondary btn-block">Finish</a></div>
                         </div>
                         <div class="card-body card-block">
                             <div class="form-group">
@@ -199,7 +198,7 @@
    $('#free').hide();
 $('#typ').change(function(){
  if ( $("#typ").val() == "one" ){ $('#one').show();$('#mult').hide();$('#free').hide();}
-    if ( $("#typ").val() == "multiple" ){$('#mult').show(); $('#one').hide();$('#free').hide();}
+    if ( $("#typ").val() == "multi" ){$('#mult').show(); $('#one').hide();$('#free').hide();}
     if ( $("#typ").val() == "free" ){$('#free').show(); $('#mult').hide();$('#one').hide();}
 
 });

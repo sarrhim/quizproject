@@ -14,6 +14,8 @@ class Exam(models.Model):
         default='Training',
     )
     is_active = models.BooleanField(default=False)
+    score = models.IntegerField(default=0)
+    prof = models.ForeignKey(User, on_delete=models.CASCADE, related_name='profes', default=1)
 
     def __str__(self):
         return self.name
@@ -73,3 +75,4 @@ class Invitation(models.Model):
     prof = models.ForeignKey(User, on_delete=models.CASCADE, related_name='professor', default=1)
     student = models.CharField(max_length=600, default=" ")
     exams = models.ForeignKey(Exam, on_delete=models.CASCADE, default=0)
+    passed = models.BooleanField(default=False)

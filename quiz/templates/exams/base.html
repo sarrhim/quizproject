@@ -41,7 +41,7 @@
                     aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="./"><img src="" alt="Quiz"></a>
+
             <a class="navbar-brand hidden" href="./"><img src="" alt="Q"></a>
         </div>
 
@@ -52,22 +52,24 @@
                 </li>
                 <h3 class="menu-title">elements</h3><!-- /.menu-title -->
 
-                <li class="menu-item-has-children ">
-                    <a href="/exam/"> <i class="menu-icon fa fa-table"></i>Exams</a>
-                    <ul class="sub-menu children dropdown-menu">
-                    </ul>
-                </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Results</a>
+                       aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Exams</a>
                     <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-puzzle-piece"></i><a href="{% url 'index' %}">My exams</a></li>
+
+
                     </ul>
-                </li>
                 <li class="menu-item-has-children dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    <a href="{% url 'profile' %}"
                        aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Profile</a>
-                    <ul class="sub-menu children dropdown-menu">
-                    </ul>
+
+                </li>
+                <br>
+                <li class="menu-item-has-children ">
+                    <a href="{% url 'becameProf' %}" class="" aria-haspopup="true"
+                       aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Become Professor</a>
+
                 </li>
 
 

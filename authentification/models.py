@@ -13,6 +13,9 @@ class Profile(models.Model):
     phone_number=models.CharField(max_length=13, blank=True)
     is_professor=models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.user.username
+
 
 # Create Django Signals
 @receiver(post_save, sender=User)

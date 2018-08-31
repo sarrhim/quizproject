@@ -1,0 +1,24 @@
+{% extends my_template %}
+
+
+{% block title %}Quiz{% endblock %}
+
+{% block content %}
+{% for examInvite in invite %}
+{%if not examInvite.passed %}
+<div class="row">
+    <div class="col-md-7">
+        <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="{{examInvite.exam.logo.url}}" alt="">
+        </a>
+    </div>
+    <div class="col-md-5">
+        <h3>{{examInvite.exam.name}}</h3>
+        <p>{{examInvite.passed}}</p>
+        <a class="btn btn-primary btn-lg" href="/quiz/{{examInvite.exam.id}}/passer">PASS EXAM</a>
+
+
+    </div>
+</div>{%endif%}
+{%endfor%}
+{% endblock %}

@@ -1,24 +1,41 @@
 from random import *
 
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from django.template import loader
 
+from authentification.models import Profile
 from .models import Question, Exam, One_answer, Free_text, MultiChoice, Reponse, studentClass, Invitation, User
 
 
+@login_required
+def logout(request):
+    logout(request)
+    return render(request, 'homepage/index.html')
+
 def index(request):
     if request.user.is_authenticated:
-        all_exams = Exam.objects.all().filter(is_active="True")
-        template = loader.get_template('exams/index.html')
-        context = {
-            'all_exams': all_exams,
-        }
-        return HttpResponse(template.render(context, request))
+        profile = Profile.objects.get(user=request.user)
+        if profile.is_professor == True:
+            all_exams = Exam.objects.filter(prof=request.user)
+            context = {
+                'all_exams': all_exams,
+            }
+            return render(request, 'exams/index.html', context)
+        else:
+            my_template = 'exams/base.html'
+            invite = studentClass.objects.filter(student=request.user)
+            context = {
+                'my_template': my_template,
+                'invite': invite,
+            }
+            return render(request, 'exams/studentIndex.html', context)
+
     else:
-        return render(request, 'registration/home.html')
+        return render(request, 'homepage/index.html')
 
 
 def create_view(request):
@@ -39,12 +56,18 @@ def createExam(request):
             category = request.POST['category']
             logo = request.FILES['logo']
             mode = request.POST['mode']
+            timer = request.POST['timer']
+            score = request.POST['score']
+
             exam = Exam()
             exam.name = examName
             exam.description = ExamDesc
             exam.category = category
             exam.logo = logo
             exam.mode = mode
+            exam.timer = timer
+            exam.score = score
+            exam.prof = request.user
             exam.save()
             request.session['id'] = exam.id
             print(request.session['id'])
@@ -63,6 +86,8 @@ def editExam(request, exam_id):
             exam.description = request.POST['examDesc']
             exam.category = request.POST['category']
             exam.logo = request.FILES['logo']
+            exam.timer = request.POST['timer']
+            exam.score = request.POST['score']
             exam.mode = request.POST['mode']
             exam.save()
             return redirect('/quiz/')
@@ -666,12 +691,12 @@ def certif(request, exam_id):
         'score': score,
     }
     print(score)
+    if score > exam.score:
+        return render(request, "exams/certif.html", context)
+    else:
+        return render(request, "exams/result.html", context)
 
-    return render(request, "exams/certif.html", context)
 
-
-def reponse(request, exam_id):
-    return 0
 
 
 def invitation(request):
@@ -727,7 +752,7 @@ def addUser(request):
         sc.email_invited = mail
         sc.save()
     users = User.objects.all()
-    exams = Exam.objects.all().filter(is_active="True")
+    exams = Exam.objects.all().filter(prof=request.user)
     context = {
         'users': users,
         'exams': exams,
@@ -735,3 +760,28 @@ def addUser(request):
     }
 
     return render(request, 'exams/addUser.html', context)
+
+
+def becameProf(request):
+    profile = Profile.objects.get(user=request.user)
+    profile.is_professor = True
+    profile.save()
+    all_exam = Exam.objects.filter(is_active=True)
+    context = {
+        'all_exams': all_exam,
+    }
+    return render(request, 'exams/index.html', context)
+
+
+def profile(request):
+    profile = Profile.objects.get(user=request.user)
+
+    if profile.is_professor == True:
+        my_template = "exams/baseProfessor.html"
+    else:
+        my_template = "exams/base.html"
+    context = {
+        'my_template': my_template,
+        'profile': profile,
+    }
+    return render(request, 'exams/profile.html', context)

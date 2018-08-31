@@ -1,4 +1,6 @@
+from django.conf import settings
 from django.conf.urls import url
+from django.contrib.auth.views import logout
 
 from . import views
 
@@ -19,13 +21,11 @@ urlpatterns = [
     url(r'^(?P<exam_id>[0-9]+)/passer/(?P<question_id>[0-9]+)$', views.passer2, name='passer2'),
     url(r'^(?P<exam_id>[0-9]+)/result/$', views.result, name='result'),
     url(r'^(?P<exam_id>[0-9]+)/certif/$', views.certif, name='certif'),
-    url(r'^(?P<exam_id>[0-9]+)/reponse/$', views.reponse, name='reponse'),
     url(r'^AddUser/$', views.addUser, name='addUser'),
     url(r'^listUsers/$', views.listUsers, name='listUsers'),
     url(r'^AddUser/InviteUser$', views.invitation, name='invitation'),
+    url(r'^becameProf/$', views.becameProf, name='becameProf'),
+    url(r'^logout/$', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
+    url(r'^profile/$', views.profile, name='profile'),
 
 ]
-"""
-    
-    url(r'^(?P<exam_id>[0-9]+)/passe/(?P<Quest_id>[0-9]+)$', views.passeQuest, name='passeQuest'),
-    """

@@ -125,7 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGOUT_REDIRECT_URL = '/authentification/'
+LOGOUT_REDIRECT_URL = '/auth/'
 LOGIN_REDIRECT_URL = '/quiz/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
