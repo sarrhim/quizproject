@@ -1,22 +1,162 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Gazela Technople Academy</title>
+    <meta content="Sufee Admin - HTML5 Admin Template" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-{% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {% for field in form %}
-      <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        {% if field.help_text %}
-          <small style="color: grey">{{ field.help_text }}</small>
-        {% endif %}
-        {% for error in field.errors %}
+    <link href="apple-icon.png" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="shortcut icon">
+
+    <link href="{% static 'assets/css/normalize.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/font-awesome.min.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/themify-icons.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/flag-icon.min.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/cs-skin-elastic.css'%}" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link href="{% static 'assets/scss/style.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/lib/vector-map/jqvmap.min.css'%}" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body class="bg-dark">
+
+
+<form method="post" novalidate>
+    {%csrf_token%}
+    <!-- Page Content -->
+    <div class="sufee-login d-flex align-content-center flex-wrap">
+        <div class="container">
+            <div class="login-content">
+                <div class="login-logo">
+                    <a href="">
+                        <h2><strong>Authentification </strong></h2>
+                    </a>
+                </div>
+                <div class="login-form">
+                    {% load widget_tweaks %}
+                    {% if form.non_field_errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for error in form.non_field_errors %}
+                        {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div class="form-group">
+                        <label>Username :</label>
+                        <input !=None
+                               %}
+                               %}
+                               %}required{% %}value="{{ form.name.value|stringformat:'s' }}" class="form-control" endif
+                               endifform.name.field.required form.name.value id="{{ form.username.id_for_label }}"
+                               if
+                               if maxlength="{{ form.name.field.max_length }}" name="{{ form.username.name }}"
+                               placeholder="username" type="text" {%
+                               {% {%>
+                        {% if form.username.help_text %}
+                        <small class="form-text text-muted">{{ form.username.help_text }}</small>
+                        {% endif %}
+                        {% for error in form.username.errors %}
           <p style="color: red">{{ error }}</p>
         {% endfor %}
-      </p>
-    {% endfor %}
-    <button type="submit">Sign up</button>
-  </form>
-{% endblock %}
+                    </div>
+                    <div class="form-group">
+                        <label>Username :</label>
+                        <input !=None
+                               %}
+                               %}
+                               %}required{% %}value="{{ form.email.value|stringformat:'s' }}" class="form-control" endif
+                               endifform.name.field.required form.name.value id="{{ form.email.id_for_label }}"
+                               if
+                               if maxlength="{{ form.email.field.max_length }}" name="{{ form.email.name }}"
+                               placeholder="Email" type="text" {%
+                               {% {%>
+                        {% if form.email.help_text %}
+                        <small class="form-text text-muted">{{ form.email.help_text }}</small>
+                        {% endif %}
+                        {% for error in form.email.errors %}
+                        <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input !=None
+                               %}
+                               %}
+
+                               %}required{% %}value="{{ form.password1.value|stringformat:'s' }}" class="form-control"
+                               endif endifform.name.value form.password1.field.required
+                               id="{{ form.password1.id_for_label }}"
+                               if
+                               if maxlength="{{ form.password1.field.max_length }}" name="{{ form.password1.name }}"
+                               placeholder="Password" type="password" {% {% {%>
+                        <!--{% if form.password1.help_text %}-->
+                        <!--<small class="form-text text-muted">{{ form.password1.help_text }}</small>-->
+                        <!--{% endif %}-->
+                        {% for error in form.password1.errors %}
+                        <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        <label>Password Confirmation</label>
+                        <input !=None
+                               %}
+                               %}
+
+                               %}required{% %}value="{{ form.password2.value|stringformat:'s' }}" class="form-control"
+                               endif endifform.name.value form.password2.field.required
+                               id="{{ form.password2.id_for_label }}"
+                               if
+                               if maxlength="{{ form.password2.field.max_length }}" name="{{ form.password2.name }}"
+                               placeholder="Password" type="password" {% {% {%>
+                        {% if form.password2.help_text %}
+                        <small class="form-text text-muted">{{ form.password2.help_text }}</small>
+                        {% endif %}
+                        {% for error in form.password2.errors %}
+                        <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember Me
+                        </label>
+                        <label class="pull-right">
+                            <a href="#">Forgotten Password?</a>
+                        </label>
+
+                    </div>
+
+                    <button class="btn btn-success btn-primary btn-flat m-b-30 m-t-30" type="submit"
+                    ">Sign up</button>
+                    <div class="social-login-content">
+
+                    </div>
+                    <div class="register-link m-t-15 text-center">
+                        <p>Already have account ? <a href="{% url 'login' %}"> Sign in</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</form>
+<!-- /.row -->
+
+<!-- /.container -->
+<script src="{% static 'assets/js/vendor/jquery-2.1.4.min.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js'%}"></script>
+<script src="{% static 'assets/js/plugins.js'%}"></script>
+<script src="{% static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>
+
 

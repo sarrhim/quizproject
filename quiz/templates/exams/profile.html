@@ -12,8 +12,10 @@
         </div>
         <div class="card-body">
             <div class="mx-auto d-block">
-                <img class="rounded-circle mx-auto d-block" src="/media/users_photos/{{profile.photo_profil.url}}"
+                {% if profile.photo_profil %}
+                <img class="rounded-circle mx-auto d-block" src="{{profile.photo_profil.url}}"
                      alt="Card image cap">
+                {% endif %}
                 <h5 class="text-sm-center mt-2 mb-1">{{profile.user.username}}</h5>
 
                 <center>

@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'authentification.apps.AuthentificationConfig',
     'quiz.apps.QuizConfig',
-
+    'widget_tweaks',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -122,13 +122,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 
 LOGOUT_REDIRECT_URL = '/auth/'
 LOGIN_REDIRECT_URL = '/quiz/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
 
 EMAIL_HOST = 'smtp.ghazelatc.com'
 EMAIL_PORT = 587

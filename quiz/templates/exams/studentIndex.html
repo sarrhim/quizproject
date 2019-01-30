@@ -6,18 +6,24 @@
 {% block content %}
 {% for examInvite in invite %}
 {%if not examInvite.passed %}
-<div class="row">
-    <div class="col-md-7">
+<div class="col-md-4">
+    <div class="feed-box text-center">
+        <section class="card">
+            <div class="card-body">
+                <div class="corner-ribon blue-ribon">
+
+                </div>
         <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="{{examInvite.exam.logo.url}}" alt="">
+            <img alt="" class="align-self-center rounded-circle mr-3" src="{{examInvite.exam.logo.url}}"
+                 style="width:85px; height:85px;">
         </a>
-    </div>
-    <div class="col-md-5">
-        <h3>{{examInvite.exam.name}}</h3>
-        <p>{{examInvite.passed}}</p>
+                <h2>{{examInvite.exam.name}}</h2>
+                <p>{{examInvite.exam.description}}</p>
         <a class="btn btn-primary btn-lg" href="/quiz/{{examInvite.exam.id}}/passer">PASS EXAM</a>
 
 
+    </div>
+        </section>
     </div>
 </div>{%endif%}
 {%endfor%}
