@@ -26,66 +26,66 @@ This is a resume of principal features in this website:
 
 #### Login:
 
-![Login](../master/media/screenshots/login.png)
+![Login](./media/screenshots/login.png)
 
 #### Professor:
 -Create exams:
 
- ![create](../master/media/screenshots/create_exam.png)
+ ![create](./media/screenshots/create_exam.png)
 
 -Add question:
 
- ![addq](../master/media/screenshots/add_question.png)
+ ![addq](./media/screenshots/add_question.png)
 
 -List of professor exams:
 
- ![list](../master/media/screenshots/list_exams_prof.png)
+ ![list](./media/screenshots/list_exams_prof.png)
 
 -Consult exam:
 
- ![consult](../master/media/screenshots/questions.png)
+ ![consult](./media/screenshots/questions.png)
 
 -Edit exam:
 
- ![edit](../master/media/screenshots/edit_exam.png)
+ ![edit](./media/screenshots/edit_exam.png)
 
 -Invite students to pass exams:
   
      Classroom students:
 
-   ![invite](../master/media/screenshots/list_of_users_of_prof_class.png)
+   ![invite](./media/screenshots/list_of_users_of_prof_class.png)
 
      New students:
 
- ![invitenew](../master/media/screenshots/invite_stud_to_exam.png)
+ ![invitenew](./media/screenshots/invite_stud_to_exam.png)
 #### Student:
 -List of student exams:
 
- ![liststud](../master/media/screenshots/stud_exams.png)
+ ![liststud](./media/screenshots/stud_exams.png)
 
 -Pass exam:
 
- ![pass_exam](../master/media/screenshots/pass_exam1.png)
+ ![pass_exam](./media/screenshots/pass_exam1.png)
 
    There are three types of exams:
 1) Training exam:
 
-![exam_train](../master/media/screenshots/exam_training.png)
+![exam_train](./media/screenshots/exam_training.png)
 
-![exam_result](../master/media/screenshots/exam_result.png)
+![exam_result](./media/screenshots/exam_result.png)
 
 2) Exam with score:
 
-![exam](../master/media/screenshots/exam_quest.png)
+![exam](./media/screenshots/exam_quest.png)
 
-![exam_result1](../master/media/screenshots/exam_result.png)
+![exam_result1](./media/screenshots/exam_result.png)
 
 3) Certified exam:
 
-![examc](../master/media/screenshots/uest.png)
+![examc](./media/screenshots/quest.png)
 
-![exam_result1](../master/media/screenshots/certificate.png)
+![exam_result1](./media/screenshots/certificate.png)
 
 #### User profile:
 
-![profile](../master/media/screenshots/user_profile.png)
+![profile](./media/screenshots/user_profile.png)
