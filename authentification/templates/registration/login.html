@@ -46,7 +46,7 @@
                             <input !=None
                                    %}
                                    %}
-                                   %}required{% %}value="{{ form.name.value|stringformat:'s' }}" class="form-control"
+                                   %}required class="form-control" value="{{ form.name.value|stringformat:'s' }}"
                                    endif endifform.name.field.required form.name.value
                                    id="{{ form.username.id_for_label }}"
                                    if
@@ -60,7 +60,7 @@
                                    %}
                                    %}
 
-                                   %}required{% %}value="{{ form.password.value|stringformat:'s' }}"
+                                   %}required value="{{ form.password.value|stringformat:'s' }}"
                                    class="form-control" endif endifform.name.field.required form.name.value
                                    id="{{ form.password.id_for_label }}"
                                    if

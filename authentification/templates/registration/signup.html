@@ -53,7 +53,7 @@
                         <input !=None
                                %}
                                %}
-                               %}required{% %}value="{{ form.name.value|stringformat:'s' }}" class="form-control" endif
+                               %}required class="form-control" endif value="{{ form.name.value|stringformat:'s' }}"
                                endifform.name.field.required form.name.value id="{{ form.username.id_for_label }}"
                                if
                                if maxlength="{{ form.name.field.max_length }}" name="{{ form.username.name }}"
@@ -90,7 +90,7 @@
                                %}
                                %}
 
-                               %}required{% %}value="{{ form.password1.value|stringformat:'s' }}" class="form-control"
+                               %}required class="form-control" value="{{ form.password1.value|stringformat:'s' }}"
                                endif endifform.name.value form.password1.field.required
                                id="{{ form.password1.id_for_label }}"
                                if
@@ -109,7 +109,7 @@
                                %}
                                %}
 
-                               %}required{% %}value="{{ form.password2.value|stringformat:'s' }}" class="form-control"
+                               %}required class="form-control" value="{{ form.password2.value|stringformat:'s' }}"
                                endif endifform.name.value form.password2.field.required
                                id="{{ form.password2.id_for_label }}"
                                if
