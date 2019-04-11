@@ -2,6 +2,8 @@
 # Force line ending normalization inside your repo to LF
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * text=auto
+* linguist-vendored
+*.py linguist-vendored=false
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # The above will handle all files NOT found below
