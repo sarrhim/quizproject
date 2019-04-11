@@ -16,3 +16,7 @@
 *.swf -crlf -diff -merge
 *.swc -crlf -diff -merge
 *.fla -crlf -diff -merge
+*.py linguist-detectable=true
+*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.css linguist-detectable=false
