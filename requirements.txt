@@ -131,7 +131,7 @@ suds-jurko==0.6
 system-service==0.3
 systemd-python==234
 testresources==2.0.1
-tlslite-ng==0.7.5
+tlslite-ng==0.7.6
 tqdm==4.28.1
 ubuntu-drivers-common==0.0.0
 ufw==0.35
