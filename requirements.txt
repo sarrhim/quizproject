@@ -34,7 +34,7 @@ django-notifications-hq==1.2
 django-smuggler==0.7.0
 django-static-jquery==2.1.4
 django-widget-tweaks==1.4.3
-djangorestframework==3.4.4
+djangorestframework==3.11.2
 docopt==0.6.2
 docutils==0.14
 ebaysdk==2.1.5
