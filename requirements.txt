@@ -3,7 +3,7 @@ appJar==0.93.0
 apturl==0.5.2
 asn1crypto==0.24.0
 auto-py-to-exe==2.4.2
-Babel==2.6.0
+Babel==2.9.1
 beautifulsoup4==4.6.3
 blinker==1.4
 bottle==0.12.15
